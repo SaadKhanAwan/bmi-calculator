@@ -1,4 +1,3 @@
-import 'package:bmi_calculator/calculator_brain.dart';
 import 'package:bmi_calculator/constants.dart';
 import 'package:bmi_calculator/providers/age_provider.dart';
 import 'package:bmi_calculator/providers/gender_provider.dart';
@@ -26,14 +25,10 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    print("build");
     final provider = Provider.of<GenderColor>(context, listen: false);
     final provider2 = Provider.of<AgeCalculation>(context, listen: false);
     final provider3 = Provider.of<WeightCalculation>(context, listen: false);
     final provider4 = Provider.of<Slidervalue>(context, listen: false);
-
-    Brain brain =
-        Brain(height: provider4.currentvalue, weight: provider3.weight);
 
     return Scaffold(
       appBar: AppBar(
@@ -203,10 +198,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => ResultScreen(
-                          bMI: brain.calculateBMI(),
-                          comments: brain.getResult(),
-                          suggestion: brain.getNotaition())));
+                      builder: (context) => const ResultScreen()));
             },
             child: Container(
               margin: const EdgeInsets.only(top: 10),
