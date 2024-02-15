@@ -52,7 +52,7 @@ class _ResultScreenState extends State<ResultScreen> {
                     style: resultlabel,
                   ),
                   Text(
-                    //here this toStringAsfixed(1) is because of brain class _bmi value is double
+                    //here this toStringAsfixed(1) is because of brain class _bmi value is doubles
                     brain.calculateBMI().toStringAsFixed(1),
                     style: resultnumber,
                   ),

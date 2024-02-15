@@ -9,7 +9,7 @@ class Brain {
     required this.height,
     required this.weight,
   }) {
-    // here is for beacause _bmi in functions is called first without initilising to late _bmi variable
+    // here is for beacause _bmi in functions is called first without initilising to late _bmi variables
     _bmi = calculateBMI();
   }
 
